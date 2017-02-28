@@ -12,37 +12,37 @@
         android:layout_weight="1">
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:background="#4d88ff"
-            android:text="Harrison 260A"
+            android:text="Harrison 208"
             android:layout_margin="1dp"/>
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Monday"
             android:background="#4d88ff"
             android:layout_margin="1dp"/>
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Tuesday"
             android:background="#4d88ff"
             android:layout_margin="1dp"/>
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Wednesday"
             android:background="#4d88ff"
             android:layout_margin="1dp"/>
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Thursday"
             android:background="#4d88ff"
             android:layout_margin="1dp"/>
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Friday"
             android:background="#4d88ff"
             android:layout_margin="1dp"/>
@@ -55,31 +55,34 @@
             android:text="8:30-9:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Seminar"
+            android:id="@+id/mo1"
+            android:background="#b3ccff"
+            android:layout_margin="1dp"
+            android:onClick="seeDetails"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Lecture"
+            android:layout_margin="1dp"
+            android:background="#b3ccff"
+            android:onClick="seeDetails"/>
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Seminar"
-            android:background="#b3ccff"
-            android:layout_margin="1dp"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Lecture"
-            android:layout_margin="1dp"
-            android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -94,31 +97,31 @@
             android:text="9:30-10:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -133,31 +136,31 @@
             android:text="10:30-11:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -172,31 +175,31 @@
             android:text="11:30-12:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -211,31 +214,31 @@
             android:text="12:30-13:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -250,31 +253,31 @@
             android:text="13:30-14:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -289,31 +292,31 @@
             android:text="14:30-15:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -328,31 +331,31 @@
             android:text="15:30-16:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -367,31 +370,31 @@
             android:text="16:30-17:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
@@ -406,31 +409,31 @@
             android:text="17:30-18:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:background="#b3ccff"
             android:layout_margin="1dp"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
             android:layout_margin="1dp"
             android:background="#b3ccff"/>
-        <TextView
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Seminar"

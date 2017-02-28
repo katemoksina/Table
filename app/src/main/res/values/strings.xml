@@ -6,6 +6,10 @@
     <string name="notes">Notes</string>
     <string name="seminar">Seminar</string>
     <string name="lecture">Lecture</string>
+    <string name="ok">OK</string>
     <string name="book">Book the Room</string>
+
+    <string name="room">Harrison 208</string>
     <string name="jon">Jon Doe</string>
+    <string name="password">Password</string>
 </resources>
