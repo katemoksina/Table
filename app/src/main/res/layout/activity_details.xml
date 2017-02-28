@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#001a4d">
+
+    <TableLayout
+        android:layout_width="163dp"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:background="#4d88ff"
+        android:layout_margin="1dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp">
+            <TextView
+                android:text="@string/name"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp">
+             <TextView
+                 android:text="@string/title"
+                 android:textStyle="normal|bold"
+                 android:textAlignment="center"/>
+         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp">
+            <TextView
+                android:text="@string/email"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp">
+            <TextView
+                android:text="@string/notes"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"/>
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:background="#b3ccff">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="@string/jon"/>
+        </TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book"
+            android:background="#0044cc"/>
+    </TableLayout>
+</LinearLayout>

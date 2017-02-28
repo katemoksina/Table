@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Table</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="email">Email</string>
+    <string name="notes">Notes</string>
+    <string name="seminar">Seminar</string>
+    <string name="lecture">Lecture</string>
+    <string name="book">Book the Room</string>
+    <string name="jon">Jon Doe</string>
 </resources>
