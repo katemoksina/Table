@@ -18,7 +18,8 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editText"
-        android:hint="@string/name"/>
+        android:hint="@string/name"
+        android:imeOptions="actionSend"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -26,7 +27,8 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editText2"
-        android:hint="@string/email"/>
+        android:hint="@string/email"
+        android:imeOptions="actionSend"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -34,10 +36,12 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/editText3"
-        android:hint="@string/password"/>
+        android:hint="@string/password"
+        android:imeOptions="actionSend"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/book"/>
+        android:text="@string/book"
+        android:onClick="submitRecord"/>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.kate.table;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,4 +34,8 @@ public class DetailsActivity  extends AppCompatActivity {
         Intent i = new Intent(DetailsActivity.this, BookingActivity.class);
         startActivity(i);
     }
+
+//    class GetDataTask extends AsyncTask<String, Void, String>{
+//
+//    }
 }
