@@ -2,11 +2,14 @@ package com.example.kate.table;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -31,6 +34,10 @@ import java.net.URL;
 public class BookingActivity extends Activity{
 
     private TextView mSent;
+    private Button mSubmit;
+    private EditText mName;
+    private EditText mEmail;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,24 +51,14 @@ public class BookingActivity extends Activity{
         setContentView(R.layout.activity_booking);
 
         mSent = (TextView) findViewById(R.id.sent);
+        mSubmit = (Button) findViewById(R.id.submit);
+        mName   = (EditText)findViewById(R.id.editTextName);
+        mEmail   = (EditText)findViewById(R.id.editTextEmail);
+
     }
 
     public void submitRecord(View view){
-//        JSONObject newRecord = new JSONObject();
-//        try {
-//            newRecord.put("key", "tu1");
-//            newRecord.put("name", "john doe");
-//            newRecord.put("email", "jd111");
-//
-//        } catch (JSONException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//        String jsonStr = newRecord.toString();
-//        System.out.println("jsonString: "+jsonStr);
-
         new PostDataTask().execute("http://192.168.0.17:3000/api/booking");
-
     }
 
     class PostDataTask extends AsyncTask<String, Void, String>{
@@ -107,9 +104,8 @@ public class BookingActivity extends Activity{
             try {
             //create data
             JSONObject dataToSend = new JSONObject();
-            dataToSend.put("name", "Don Joe");
-            dataToSend.put("title", "lecture");
-            dataToSend.put("email", "dj111");
+            dataToSend.put("name", BookingActivity.this.mName.getText().toString());
+            dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
 
                 //initialise request + connect to server
                 URL url = new URL(urlPath);
@@ -146,4 +142,5 @@ public class BookingActivity extends Activity{
             return result.toString();
         }
     }
+
 }

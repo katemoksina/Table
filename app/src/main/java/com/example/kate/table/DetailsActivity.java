@@ -25,6 +25,7 @@ public class DetailsActivity  extends AppCompatActivity {
 
     private TextView mResult;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
