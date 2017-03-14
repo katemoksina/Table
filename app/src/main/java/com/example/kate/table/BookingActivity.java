@@ -12,6 +12,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -89,10 +90,11 @@ public class BookingActivity extends Activity{
             super.onPostExecute(result);
             mSent.setText(result);
 
-            //remove progrss dialog
+            //remove progress dialog
             if(mProgressDialog != null){
                 mProgressDialog.dismiss();
             }
+            Toast.makeText(BookingActivity.this, R.string.confirm_booking, Toast.LENGTH_SHORT).show();
         }
 
         private String postData(String urlPath) throws IOException, JSONException{
