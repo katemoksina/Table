@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class TableActivity extends AppCompatActivity {
-    Button mButton;
+    String timeSlot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,8 @@ public class TableActivity extends AppCompatActivity {
     public void seeDetails(View view){
         //create DetailsActivity with onClick=seeDetails in activity_table.xml
         Intent i = new Intent(TableActivity.this, DetailsActivity.class);
+        timeSlot = view.getTag().toString();
+        i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, timeSlot);
         startActivity(i);
     }
 }

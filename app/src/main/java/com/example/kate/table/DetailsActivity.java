@@ -24,6 +24,9 @@ import java.nio.Buffer;
 public class DetailsActivity  extends AppCompatActivity {
 
     private TextView mResult;
+    public static final String EXTRA_TIME_SLOT = "time slot";
+    private String mTimeSlot;
+    String timeSlot;
 
 
     @Override
@@ -39,6 +42,7 @@ public class DetailsActivity  extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         mResult = (TextView) findViewById(R.id.result);
+        mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
         //make GET request
         new GetDataTask().execute("http://192.168.0.17:3000/api/booking");
@@ -50,6 +54,7 @@ public class DetailsActivity  extends AppCompatActivity {
     }
     public void makeBooking(View view){
         Intent i = new Intent(DetailsActivity.this, BookingActivity.class);
+        i.putExtra(BookingActivity.EXTRA_TIME_SLOT, mTimeSlot);
         startActivity(i);
     }
 

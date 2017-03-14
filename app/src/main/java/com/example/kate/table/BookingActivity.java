@@ -27,6 +27,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.SQLOutput;
 
 /**
  * Created by kate on 28/02/2017.
@@ -38,6 +39,8 @@ public class BookingActivity extends Activity{
     private Button mSubmit;
     private EditText mName;
     private EditText mEmail;
+    public static final String EXTRA_TIME_SLOT = "time slot";
+    private String mTimeSlot;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,8 @@ public class BookingActivity extends Activity{
         mSubmit = (Button) findViewById(R.id.submit);
         mName   = (EditText)findViewById(R.id.editTextName);
         mEmail   = (EditText)findViewById(R.id.editTextEmail);
+        mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
+
 
     }
 
@@ -105,9 +110,11 @@ public class BookingActivity extends Activity{
 
             try {
             //create data
-            JSONObject dataToSend = new JSONObject();
-            dataToSend.put("name", BookingActivity.this.mName.getText().toString());
-            dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
+                JSONObject dataToSend = new JSONObject();
+                dataToSend.put("name", BookingActivity.this.mName.getText().toString());
+                dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
+                dataToSend.put("tag", BookingActivity.this.mTimeSlot);
+                System.out.println(dataToSend);
 
                 //initialise request + connect to server
                 URL url = new URL(urlPath);

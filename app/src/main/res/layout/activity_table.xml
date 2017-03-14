@@ -60,6 +60,7 @@
             android:layout_height="fill_parent"
             android:text="Seminar"
             android:id="@+id/mo1"
+            android:tag="mo1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
             android:onClick="seeDetails"/>
@@ -67,6 +68,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Lecture"
+            android:tag="tu1"
             android:layout_margin="1dp"
             android:background="#b3ccff"
             android:onClick="seeDetails"/>
