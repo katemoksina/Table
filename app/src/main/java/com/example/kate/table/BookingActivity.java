@@ -35,9 +35,10 @@ import java.sql.SQLOutput;
 
 public class BookingActivity extends Activity{
 
-    private TextView mSent;
     private Button mSubmit;
     private EditText mName;
+    private EditText mNotes;
+    private EditText mTitle;
     private EditText mEmail;
     public static final String EXTRA_TIME_SLOT = "time slot";
     private String mTimeSlot;
@@ -54,17 +55,18 @@ public class BookingActivity extends Activity{
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
         setContentView(R.layout.activity_booking);
 
-        mSent = (TextView) findViewById(R.id.sent);
         mSubmit = (Button) findViewById(R.id.submit);
         mName   = (EditText)findViewById(R.id.editTextName);
+        mTitle   = (EditText)findViewById(R.id.editTextTitle);
         mEmail   = (EditText)findViewById(R.id.editTextEmail);
+        mNotes   = (EditText)findViewById(R.id.editTextNotes);
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
 
     }
 
     public void submitRecord(View view){
-        new PostDataTask().execute("http://192.168.0.17:3000/api/booking");
+        new PostDataTask().execute("http://10.173.19.76:3000/api/booking");
     }
 
     class PostDataTask extends AsyncTask<String, Void, String>{
@@ -93,7 +95,8 @@ public class BookingActivity extends Activity{
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            mSent.setText(result);
+            Intent i = new Intent(BookingActivity.this, TableActivity.class);
+            startActivity(i);
 
             //remove progress dialog
             if(mProgressDialog != null){
@@ -112,7 +115,9 @@ public class BookingActivity extends Activity{
             //create data
                 JSONObject dataToSend = new JSONObject();
                 dataToSend.put("name", BookingActivity.this.mName.getText().toString());
+                dataToSend.put("title", BookingActivity.this.mTitle.getText().toString());
                 dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
+                dataToSend.put("notes", BookingActivity.this.mNotes.getText().toString());
                 dataToSend.put("tag", BookingActivity.this.mTimeSlot);
                 System.out.println(dataToSend);
 

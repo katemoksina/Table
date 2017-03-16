@@ -25,12 +25,14 @@ import java.net.URL;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TableActivity extends AppCompatActivity {
     String timeSlot;
     JSONObject jsonline;
-    List<String> result;
+    Map<String, String> result;
     String[] times = new String[]{"mo1", "mo2", "mo3", "mo4", "mo5", "mo6", "mo7", "mo8", "mo9", "mo10", "tu1", "tu2", "tu3", "tu4", "tu5", "tu6", "tu7", "tu8", "tu9", "tu10", "we1", "we2", "we3", "we4", "we5", "we6", "we7", "we8", "we9", "we10", "th1", "th2", "th3", "th4", "th5", "th6", "th7", "th8", "th9", "th10", "fr1", "fr2", "fr3", "fr4", "fr5", "fr6", "fr7", "fr8", "fr9", "fr10"};
 
     @Override
@@ -47,7 +49,7 @@ public class TableActivity extends AppCompatActivity {
 
 
         //make GET request
-        new GetDataTask().execute("http://192.168.0.17:3000/api/booking");
+        new GetDataTask().execute("http://10.173.19.76:3000/api/booking");
     }
 
     public void seeDetails(View view){
@@ -91,8 +93,9 @@ public class TableActivity extends AppCompatActivity {
             for (String time : times){
                 ViewGroup v = (ViewGroup)findViewById(R.id.table);
                 Button b = (Button)v.findViewWithTag(time);
-                if (TableActivity.this.result.contains(time)){
+                if (TableActivity.this.result.keySet().contains(time)){
                     b.setBackgroundColor(Color.RED);
+                    b.setText(TableActivity.this.result.get(time));
                 } else {
                     b.setText("Available");
                 }
@@ -108,8 +111,8 @@ public class TableActivity extends AppCompatActivity {
 
         }
 
-        private List getData(String urlPath) throws IOException {
-            List<String> result = new ArrayList<String>();
+        private Map<String, String> getData(String urlPath) throws IOException {
+            Map<String, String> result = new HashMap<String, String>();
             BufferedReader bufferedReader = null;
 
             try {
@@ -132,7 +135,7 @@ public class TableActivity extends AppCompatActivity {
 
                         for (int i=0; i < jsonline.length(); i++){
                             JSONObject jsonObject = jsonline.getJSONObject(i);
-                            result.add((String)jsonObject.get("tag"));
+                            result.put((String)jsonObject.get("tag"), (String)jsonObject.get("title"));
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

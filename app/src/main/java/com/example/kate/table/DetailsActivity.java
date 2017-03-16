@@ -54,7 +54,7 @@ public class DetailsActivity  extends AppCompatActivity {
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
         //make GET request
-        new GetDataTask().execute("http://192.168.0.17:3000/api/booking");
+        new GetDataTask().execute("http://10.173.19.76:3000/api/booking");
     }
 
     public void gotoTable(View view){
@@ -97,12 +97,12 @@ public class DetailsActivity  extends AppCompatActivity {
             //set data response to textView
             TextView booking_name = (TextView)findViewById(R.id.booking_name);
             booking_name.setText(DetailsActivity.this.result.get("name"));
-            //TextView booking_title = (TextView)findViewById(R.id.booking_title);
-            //booking_title.setText(DetailsActivity.this.result.get("title"));
+            TextView booking_title = (TextView)findViewById(R.id.booking_title);
+            booking_title.setText(DetailsActivity.this.result.get("title"));
             TextView booking_email = (TextView)findViewById(R.id.booking_email);
             booking_email.setText(DetailsActivity.this.result.get("email"));
-            //TextView booking_notes = (TextView)findViewById(R.id.booking_notes);
-            //booking_notes.setText(DetailsActivity.this.result.get("notes"));
+            TextView booking_notes = (TextView)findViewById(R.id.booking_notes);
+            booking_notes.setText(DetailsActivity.this.result.get("notes"));
 
             //remove progrss dialog
             if(mProgressDialog != null){
@@ -138,9 +138,9 @@ public class DetailsActivity  extends AppCompatActivity {
                             if (((String)jsonObject.get("tag")).equals(mTimeSlot)){
                                 System.out.println(jsonObject.keys());
                                 result.put("name", (String)jsonObject.get("name"));
-                                //result.put("title", (String)jsonObject.get("title"));
+                                result.put("title", (String)jsonObject.get("title"));
                                 result.put("email", (String)jsonObject.get("email"));
-                                //result.put("notes", (String)jsonObject.get("notes"));
+                                result.put("notes", (String)jsonObject.get("notes"));
                             } else {
                                 System.out.println("tag"+(String)jsonObject.get("tag"));
                                 System.out.println("time slot" + mTimeSlot);

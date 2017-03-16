@@ -24,10 +24,28 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextTitle"
+        android:hint="@string/title"
+        android:imeOptions="actionSend"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editTextEmail"
         android:hint="@string/email"
+        android:imeOptions="actionSend"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextNotes"
+        android:hint="@string/notes"
         android:imeOptions="actionSend"/>
 
     <EditText

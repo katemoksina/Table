@@ -59,7 +59,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -67,7 +67,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu1"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -75,7 +75,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -83,7 +83,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th1"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -91,7 +91,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -108,7 +108,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo2"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -116,7 +116,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu2"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -124,7 +124,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we2"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -132,7 +132,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th2"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -140,7 +140,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr2"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -157,7 +157,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo3"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -165,7 +165,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu3"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -173,7 +173,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we3"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -181,7 +181,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th3"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -189,7 +189,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr3"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -206,7 +206,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo4"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -214,7 +214,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu4"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -222,7 +222,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we4"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -230,7 +230,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th4"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -238,7 +238,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr4"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -255,7 +255,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo5"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -263,7 +263,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu5"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -271,7 +271,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we5"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -279,7 +279,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th5"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -287,7 +287,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr5"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -304,7 +304,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo6"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -312,7 +312,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu6"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -320,7 +320,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we6"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -328,7 +328,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th6"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -336,7 +336,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr6"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -353,7 +353,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo7"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -361,7 +361,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu7"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -369,7 +369,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we7"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -377,7 +377,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th7"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -385,7 +385,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr7"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -402,7 +402,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo8"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -410,7 +410,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu8"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -418,7 +418,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we8"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -426,7 +426,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th8"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -434,7 +434,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr8"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -451,7 +451,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo9"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -459,7 +459,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu9"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -467,7 +467,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we9"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -475,7 +475,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th9"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -483,7 +483,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr9"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -500,7 +500,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="mo10"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -508,7 +508,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="tu10"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -516,7 +516,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="we10"
             android:background="#b3ccff"
             android:layout_margin="1dp"
@@ -524,7 +524,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Lecture"
+            
             android:tag="th10"
             android:layout_margin="1dp"
             android:background="#b3ccff"
@@ -532,7 +532,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Seminar"
+            
             android:tag="fr10"
             android:background="#b3ccff"
             android:layout_margin="1dp"
