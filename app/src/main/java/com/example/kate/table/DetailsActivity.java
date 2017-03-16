@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +20,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.Buffer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by kate on 28/02/2017.
@@ -27,6 +35,8 @@ public class DetailsActivity  extends AppCompatActivity {
     public static final String EXTRA_TIME_SLOT = "time slot";
     private String mTimeSlot;
     String timeSlot;
+    Map<String, String> result;
+
 
 
     @Override
@@ -41,7 +51,6 @@ public class DetailsActivity  extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
         setContentView(R.layout.activity_details);
 
-        mResult = (TextView) findViewById(R.id.result);
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
         //make GET request
@@ -74,7 +83,8 @@ public class DetailsActivity  extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             try {
-                return getData(params[0]);
+                getData(params[0]);
+                return null;
             } catch (IOException e){
                 return "network error!";
             }
@@ -85,7 +95,14 @@ public class DetailsActivity  extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             //set data response to textView
-            mResult.setText(result);
+            TextView booking_name = (TextView)findViewById(R.id.booking_name);
+            booking_name.setText(DetailsActivity.this.result.get("name"));
+            //TextView booking_title = (TextView)findViewById(R.id.booking_title);
+            //booking_title.setText(DetailsActivity.this.result.get("title"));
+            TextView booking_email = (TextView)findViewById(R.id.booking_email);
+            booking_email.setText(DetailsActivity.this.result.get("email"));
+            //TextView booking_notes = (TextView)findViewById(R.id.booking_notes);
+            //booking_notes.setText(DetailsActivity.this.result.get("notes"));
 
             //remove progrss dialog
             if(mProgressDialog != null){
@@ -94,8 +111,8 @@ public class DetailsActivity  extends AppCompatActivity {
 
         }
 
-        private String getData(String urlPath) throws IOException {
-            StringBuilder result = new StringBuilder();
+        private Map getData(String urlPath) throws IOException {
+            Map<String, String> result = new HashMap<String, String>();
             BufferedReader bufferedReader = null;
 
             try {
@@ -113,14 +130,35 @@ public class DetailsActivity  extends AppCompatActivity {
                 bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String line;
                 while((line = bufferedReader.readLine()) != null) {
-                    result.append(line).append("\n");
+                    try {
+                        JSONArray jsonline = new JSONArray(line);
+
+                        for (int i=0; i < jsonline.length(); i++){
+                            JSONObject jsonObject = jsonline.getJSONObject(i);
+                            if (((String)jsonObject.get("tag")).equals(mTimeSlot)){
+                                System.out.println(jsonObject.keys());
+                                result.put("name", (String)jsonObject.get("name"));
+                                //result.put("title", (String)jsonObject.get("title"));
+                                result.put("email", (String)jsonObject.get("email"));
+                                //result.put("notes", (String)jsonObject.get("notes"));
+                            } else {
+                                System.out.println("tag"+(String)jsonObject.get("tag"));
+                                System.out.println("time slot" + mTimeSlot);
+                            }
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+                    }
                 }
 
             } finally {
                 if (bufferedReader != null)
                     bufferedReader.close();
             }
-            return result.toString();
+            DetailsActivity.this.result = result;
+            System.out.println(DetailsActivity.this.result);
+            return result;
         }
 
     }
