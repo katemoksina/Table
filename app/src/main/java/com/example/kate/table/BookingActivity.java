@@ -72,6 +72,10 @@ public class BookingActivity extends Activity{
         new PostDataTask().execute("http://192.168.0.17:3000/api/booking");
     }
 
+    public void neverMind(View view){
+        Intent i = new Intent(BookingActivity.this, TableActivity.class);
+        startActivity(i);
+    }
     public static String hashPassword(String password_plaintext) {
         String salt = BCrypt.gensalt(workload);
         String hashed_password = BCrypt.hashpw(password_plaintext, salt);

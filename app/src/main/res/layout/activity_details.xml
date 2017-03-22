@@ -12,18 +12,19 @@
         >
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#4d88ff"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:padding="5dp">
+            android:gravity="center"
+            >
             <TextView
                 android:text="@string/room"
                 android:textStyle="normal|bold"
-                android:textSize="18sp"
-                android:padding="5dp"
-                />
+                android:textSize="30sp"
+                android:gravity="center"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,7 +32,7 @@
             android:padding="15dp"
             android:layout_weight="1"
             android:weightSum="7"
-            android:background="#4d88ff"
+            android:background="#b3ccff"
             android:layout_margin="1dp">
             <TextView
                 android:text="@string/name"
@@ -51,7 +52,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1"
-            android:background="#4d88ff"
+            android:background="#b3ccff"
             android:layout_margin="1dp"
             android:padding="15dp">
             <TextView
@@ -71,7 +72,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1"
-            android:background="#4d88ff"
+            android:background="#b3ccff"
             android:layout_margin="1dp"
             android:padding="15dp">
             <TextView
@@ -90,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="#4d88ff"
+            android:background="#b3ccff"
             android:layout_weight="1"
             android:layout_margin="1dp"
             android:padding="15dp">
@@ -105,11 +106,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="5"/>
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="#4d88ff"
+            android:background="#b3ccff"
             android:layout_weight="1"
             android:layout_margin="1dp"
             android:padding="10dp"
@@ -117,23 +119,17 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/book"
-                android:background="#0044cc"
+                android:text="Cancel my booking"
+                android:background="#4d88ff"
+                android:id="@+id/book_button"
                 android:layout_margin="10dp"
-                android:onClick="makeBooking"
+                android:onClick="cancelBooking"
                 />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Cancel"
-                android:background="#0044cc"
-                android:layout_margin="10dp"
-                android:onClick="cancelBooking"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:text="@string/ok"
-                android:background="#0044cc"
+                android:background="#4d88ff"
                 android:layout_margin="10dp"
                 android:onClick="gotoTable"/>
         </TableRow>

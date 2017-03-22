@@ -54,9 +54,16 @@ public class TableActivity extends AppCompatActivity {
 
     public void seeDetails(View view){
         //create DetailsActivity with onClick=seeDetails in activity_table.xml
+
         Intent i = new Intent(TableActivity.this, DetailsActivity.class);
         timeSlot = view.getTag().toString();
         i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, timeSlot);
+        startActivity(i);
+    }
+
+    public void makeBooking(View view){
+        Intent i = new Intent(TableActivity.this, BookingActivity.class);
+        i.putExtra(BookingActivity.EXTRA_TIME_SLOT, timeSlot);
         startActivity(i);
     }
 
@@ -98,6 +105,11 @@ public class TableActivity extends AppCompatActivity {
                     b.setText(TableActivity.this.result.get(time));
                 } else {
                     b.setText("Available");
+                    b.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            makeBooking(v);
+                        }
+                    });
                 }
             }
             } catch (NullPointerException e){

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -35,7 +36,7 @@ public class DetailsActivity  extends AppCompatActivity {
     public static final String EXTRA_TIME_SLOT = "time slot";
     private String mTimeSlot;
     String timeSlot;
-    Map<String, String> result;
+    Map<String, String> result = null;
     public static final String EXTRA_RECORD_ID = "id";
     private String mID;
     public static final String EXTRA_PASS_HASH = "hashed password";
@@ -65,6 +66,7 @@ public class DetailsActivity  extends AppCompatActivity {
         Intent i = new Intent(DetailsActivity.this, TableActivity.class);
         startActivity(i);
     }
+
     public void cancelBooking(View view){
         Intent i = new Intent(DetailsActivity.this, CancelActivity.class);
         i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, mTimeSlot);

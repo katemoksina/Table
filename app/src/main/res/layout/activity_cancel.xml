@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#b3ccff"
+    >
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.25">
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
     <TextView
-        android:text="Please enter your details"
+        android:text="@string/enter_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
+        android:textColor="#001a4d"
         android:layout_margin="@dimen/activity_vertical_margin"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -29,12 +48,41 @@
         android:id="@+id/password"
         android:hint="@string/password"
         android:gravity="center_vertical|center"/>
-
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
     <Button
-        android:text="Cancel"
+        android:text="CANCEL THE BOOKING"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cancel_action"
         android:onClick="cancelData"
-        android:gravity="center"/>
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#4d88ff"
+        android:layout_margin="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"/>
+
+            <Button
+                android:text="BACK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/never_mind"
+                android:onClick="neverMind"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="#4d88ff"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.25">
+    </RelativeLayout>
 </LinearLayout>

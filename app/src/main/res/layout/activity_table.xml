@@ -7,7 +7,7 @@
     >
 <TableLayout android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:stretchColumns="*"
+    android:stretchColumns="1,2,3,4,5"
     android:background="#001a4d"
     android:id="@+id/table"
     >
@@ -17,7 +17,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#4d88ff"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -64,63 +66,68 @@
               android:layout_weight="1">
         <TextView
             android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:text="8:30-9:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"
             android:textStyle="normal|bold"
             android:gravity="center"
-            android:layout_width="wrap_content"/>
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            
+
             android:tag="mo1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
+            android:onClick="seeDetails"
+            />
         <Button
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            
+
             android:tag="tu1"
             android:layout_margin="1dp"
             android:background="#b3ccff"
-            android:onClick="seeDetails"/>
+            android:onClick="seeDetails"
+            />
         <Button
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            
+
             android:tag="we1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
+            android:onClick="seeDetails"
+            />
         <Button
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            
+
             android:tag="th1"
             android:layout_margin="1dp"
             android:background="#b3ccff"
-            android:onClick="seeDetails"/>
+            android:onClick="seeDetails"
+            />
         <Button
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            
+
             android:tag="fr1"
             android:background="#b3ccff"
             android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
+            android:onClick="seeDetails"
+            />
     </TableRow>
     <TableRow android:gravity="center"
         android:layout_weight="1">
         <TextView
             android:layout_height="match_parent"
+
             android:text="9:30-10:30"
             android:layout_margin="1dp"
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -171,7 +178,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -222,7 +231,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -273,7 +284,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -323,7 +336,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -374,7 +389,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -425,7 +442,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -476,7 +495,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -527,7 +548,9 @@
             android:background="#4d88ff"
             android:gravity="center"
             android:textStyle="normal|bold"
-            android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

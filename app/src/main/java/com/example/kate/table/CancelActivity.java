@@ -58,7 +58,11 @@ public class CancelActivity extends Activity {
         } else {
         Toast.makeText(CancelActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
     }
+    }
 
+    public void neverMind(View view){
+        Intent i = new Intent(CancelActivity.this, TableActivity.class);
+        startActivity(i);
     }
 
     public static boolean checkPassword(String password_plaintext, String stored_hash) {

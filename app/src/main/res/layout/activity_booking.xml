@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:gravity="top|center"
+              android:background="#b3ccff">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.25">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
 
     <TextView
         android:text="@string/book"
+        android:textColor="#001a4d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"/>
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:gravity="top|center"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_margin="2dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -19,7 +42,9 @@
         android:ems="10"
         android:id="@+id/editTextName"
         android:hint="@string/name"
-        android:imeOptions="actionSend"/>
+        android:imeOptions="actionSend"
+        android:gravity="top|center"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -27,9 +52,10 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTextTitle"
-        android:maxLength="10"
+        android:maxLength="13"
         android:hint="@string/eventType"
-        android:imeOptions="actionSend"/>
+        android:imeOptions="actionSend"
+        android:gravity="top|center"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -38,7 +64,8 @@
         android:ems="10"
         android:id="@+id/editTextEmail"
         android:hint="@string/email"
-        android:imeOptions="actionSend"/>
+        android:imeOptions="actionSend"
+        android:gravity="top|center"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -47,7 +74,8 @@
         android:ems="10"
         android:id="@+id/editTextNotes"
         android:hint="@string/notes"
-        android:imeOptions="actionSend"/>
+        android:imeOptions="actionSend"
+        android:gravity="top|center"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -56,14 +84,42 @@
         android:ems="10"
         android:id="@+id/editTextPassword"
         android:hint="@string/password"
-        android:imeOptions="actionSend"/>
-
+        android:imeOptions="actionSend"
+        android:gravity="top|center"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/book"
-        android:onClick="submitRecord"/>
+        android:background="#4d88ff"
+
+        android:onClick="submitRecord"
+        android:padding="12dp"
+        android:layout_margin="20dp"/>
+            <Button
+                android:id="@+id/never_mind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BACK"
+                android:background="#4d88ff"
+
+                android:onClick="neverMind"
+                android:padding="12dp"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+            </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.25">
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/sent"
