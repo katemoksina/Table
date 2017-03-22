@@ -27,7 +27,8 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTextTitle"
-        android:hint="@string/title"
+        android:maxLength="10"
+        android:hint="@string/eventType"
         android:imeOptions="actionSend"/>
 
     <EditText

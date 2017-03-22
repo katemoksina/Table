@@ -49,7 +49,7 @@ public class TableActivity extends AppCompatActivity {
 
 
         //make GET request
-        new GetDataTask().execute("http://10.173.19.76:3000/api/booking");
+        new GetDataTask().execute("http://192.168.0.17:3000/api/booking");
     }
 
     public void seeDetails(View view){

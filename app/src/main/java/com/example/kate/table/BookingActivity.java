@@ -40,8 +40,10 @@ public class BookingActivity extends Activity{
     private EditText mNotes;
     private EditText mTitle;
     private EditText mEmail;
+    private EditText mPassword;
     public static final String EXTRA_TIME_SLOT = "time slot";
     private String mTimeSlot;
+    private static int workload = 12;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +62,21 @@ public class BookingActivity extends Activity{
         mTitle   = (EditText)findViewById(R.id.editTextTitle);
         mEmail   = (EditText)findViewById(R.id.editTextEmail);
         mNotes   = (EditText)findViewById(R.id.editTextNotes);
+        mPassword   = (EditText)findViewById(R.id.editTextPassword);
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
 
     }
 
     public void submitRecord(View view){
-        new PostDataTask().execute("http://10.173.19.76:3000/api/booking");
+        new PostDataTask().execute("http://192.168.0.17:3000/api/booking");
+    }
+
+    public static String hashPassword(String password_plaintext) {
+        String salt = BCrypt.gensalt(workload);
+        String hashed_password = BCrypt.hashpw(password_plaintext, salt);
+
+        return(hashed_password);
     }
 
     class PostDataTask extends AsyncTask<String, Void, String>{
@@ -118,6 +128,7 @@ public class BookingActivity extends Activity{
                 dataToSend.put("title", BookingActivity.this.mTitle.getText().toString());
                 dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
                 dataToSend.put("notes", BookingActivity.this.mNotes.getText().toString());
+                dataToSend.put("password", hashPassword(BookingActivity.this.mPassword.getText().toString()));
                 dataToSend.put("tag", BookingActivity.this.mTimeSlot);
                 System.out.println(dataToSend);
 

@@ -23,6 +23,9 @@
         <activity android:name=".BookingActivity" android:screenOrientation="landscape">
 
         </activity>
+        <activity android:name=".CancelActivity" android:screenOrientation="landscape">
+
+        </activity>
     </application>
 
 </manifest>

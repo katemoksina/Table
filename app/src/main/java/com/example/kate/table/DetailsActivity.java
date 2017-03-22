@@ -36,6 +36,10 @@ public class DetailsActivity  extends AppCompatActivity {
     private String mTimeSlot;
     String timeSlot;
     Map<String, String> result;
+    public static final String EXTRA_RECORD_ID = "id";
+    private String mID;
+    public static final String EXTRA_PASS_HASH = "hashed password";
+    private String mHash;
 
 
 
@@ -54,13 +58,21 @@ public class DetailsActivity  extends AppCompatActivity {
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
         //make GET request
-        new GetDataTask().execute("http://10.173.19.76:3000/api/booking");
+        new GetDataTask().execute("http://192.168.0.17:3000/api/booking");
     }
 
     public void gotoTable(View view){
         Intent i = new Intent(DetailsActivity.this, TableActivity.class);
         startActivity(i);
     }
+    public void cancelBooking(View view){
+        Intent i = new Intent(DetailsActivity.this, CancelActivity.class);
+        i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, mTimeSlot);
+        i.putExtra(DetailsActivity.EXTRA_RECORD_ID, mID);
+        i.putExtra(DetailsActivity.EXTRA_PASS_HASH, mHash);
+        startActivity(i);
+    }
+
     public void makeBooking(View view){
         Intent i = new Intent(DetailsActivity.this, BookingActivity.class);
         i.putExtra(BookingActivity.EXTRA_TIME_SLOT, mTimeSlot);
@@ -141,6 +153,8 @@ public class DetailsActivity  extends AppCompatActivity {
                                 result.put("title", (String)jsonObject.get("title"));
                                 result.put("email", (String)jsonObject.get("email"));
                                 result.put("notes", (String)jsonObject.get("notes"));
+                                mID = (String)jsonObject.get("_id");
+                                mHash = (String)jsonObject.get("password");
                             } else {
                                 System.out.println("tag"+(String)jsonObject.get("tag"));
                                 System.out.println("time slot" + mTimeSlot);

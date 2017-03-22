@@ -125,6 +125,13 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:text="Cancel"
+                android:background="#0044cc"
+                android:layout_margin="10dp"
+                android:onClick="cancelBooking"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="@string/ok"
                 android:background="#0044cc"
                 android:layout_margin="10dp"
