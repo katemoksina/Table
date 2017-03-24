@@ -51,12 +51,12 @@ public class CancelActivity extends Activity {
 
     public void cancelData(View view){
         mPass = CancelActivity.this.mPassword.getText().toString();
-        String s = "http://10.173.19.96:3000/api/booking/" + mID;
+        String s = "http://"+TableActivity.currentIP+":3000/api/booking/" + mID;
         System.out.println(s);
         if (checkPassword(mPass,mHash)) {
             new DeleteDataTask().execute(s);
         } else {
-        Toast.makeText(CancelActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
+        Toast.makeText(CancelActivity.this, "Incorrect booking code", Toast.LENGTH_SHORT).show();
     }
     }
 

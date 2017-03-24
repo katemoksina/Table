@@ -30,6 +30,9 @@ import java.util.List;
 import java.util.Map;
 
 public class TableActivity extends AppCompatActivity {
+    static String eduroamForum = "10.173.19.127";
+    static String eduroamHarrison = "10.173.19.96";
+    public static String currentIP = eduroamForum;
     String timeSlot;
     JSONObject jsonline;
     Map<String, String> result;
@@ -49,7 +52,7 @@ public class TableActivity extends AppCompatActivity {
 
 
         //make GET request
-        new GetDataTask().execute("http://10.173.19.96:3000/api/booking");
+        new GetDataTask().execute("http://"+currentIP+":3000/api/booking");
     }
 
     public void seeDetails(View view){
@@ -102,7 +105,7 @@ public class TableActivity extends AppCompatActivity {
                 ViewGroup v = (ViewGroup)findViewById(R.id.table);
                 Button b = (Button)v.findViewWithTag(time);
                 if (TableActivity.this.result.keySet().contains(time)){
-                    b.setBackgroundColor(Color.RED);
+                    b.setBackgroundColor(Color.parseColor("#ff6666"));
                     b.setText(TableActivity.this.result.get(time));
                 } else {
                     b.setText("Available");

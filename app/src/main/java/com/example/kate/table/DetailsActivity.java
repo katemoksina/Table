@@ -59,7 +59,7 @@ public class DetailsActivity  extends AppCompatActivity {
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
         //make GET request
-        new GetDataTask().execute("http://10.173.19.96:3000/api/booking");
+        new GetDataTask().execute("http://"+TableActivity.currentIP+":3000/api/booking");
     }
 
     public void gotoTable(View view){

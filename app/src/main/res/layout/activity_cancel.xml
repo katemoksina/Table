@@ -46,7 +46,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/password"
-        android:hint="@string/password"
+        android:hint="@string/booking_code"
         android:gravity="center_vertical|center"/>
         <LinearLayout
             android:orientation="horizontal"

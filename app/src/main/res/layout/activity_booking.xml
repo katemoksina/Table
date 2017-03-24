@@ -83,7 +83,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/editTextPassword"
-        android:hint="@string/password"
+        android:hint="@string/booking_code"
         android:imeOptions="actionSend"
         android:gravity="top|center"/>
         <LinearLayout

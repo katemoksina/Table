@@ -70,7 +70,7 @@ public class BookingActivity extends Activity{
     }
 
     public void submitRecord(View view){
-        new PostDataTask().execute("http://10.173.19.96:3000/api/booking");
+        new PostDataTask().execute("http://"+TableActivity.currentIP+":3000/api/booking");
     }
 
     public void neverMind(View view){
