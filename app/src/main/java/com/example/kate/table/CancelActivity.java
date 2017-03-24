@@ -3,6 +3,7 @@ package com.example.kate.table;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,11 @@ public class CancelActivity extends Activity {
     private EditText mUsername;
     private static int workload = 12;
 
+    private SoundPool mSoundPool;
+    int badID;
+    int cancelID;
+    int clickID;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().getDecorView().setSystemUiVisibility(
@@ -46,21 +52,29 @@ public class CancelActivity extends Activity {
         mHash = getIntent().getStringExtra(EXTRA_PASS_HASH);
         mUsername = (EditText) findViewById(R.id.username);
         mPassword   = (EditText)findViewById(R.id.password);
-        System.out.println((String)null);
+
+        mSoundPool = new SoundPool.Builder().build();
+        badID = mSoundPool.load(this, R.raw.bad,1);
+        cancelID = mSoundPool.load(this, R.raw.cancel,1);
+        clickID = mSoundPool.load(this, R.raw.click,1);
     }
 
     public void cancelData(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         mPass = CancelActivity.this.mPassword.getText().toString();
         String s = "http://"+TableActivity.currentIP+":3000/api/booking/" + mID;
         System.out.println(s);
         if (checkPassword(mPass,mHash)) {
+            mSoundPool.play(cancelID,1,1,1,0,1);
             new DeleteDataTask().execute(s);
         } else {
-        Toast.makeText(CancelActivity.this, "Incorrect booking code", Toast.LENGTH_SHORT).show();
+            mSoundPool.play(badID,1,1,1,0,1);
+            Toast.makeText(CancelActivity.this, "Incorrect booking code", Toast.LENGTH_SHORT).show();
     }
     }
 
     public void neverMind(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(CancelActivity.this, TableActivity.class);
         startActivity(i);
     }

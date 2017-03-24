@@ -3,6 +3,7 @@ package com.example.kate.table;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,6 +47,11 @@ public class BookingActivity extends Activity{
     private String mTimeSlot;
     private static int workload = 12;
 
+    private SoundPool mSoundPool;
+    int badID;
+    int successID;
+    int clickID;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,17 +72,24 @@ public class BookingActivity extends Activity{
         mPassword   = (EditText)findViewById(R.id.editTextPassword);
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
+        mSoundPool = new SoundPool.Builder().build();
+        badID = mSoundPool.load(this, R.raw.bad,1);
+        successID = mSoundPool.load(this, R.raw.good,1);
+        clickID = mSoundPool.load(this, R.raw.click,1);
 
     }
 
     public void submitRecord(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         new PostDataTask().execute("http://"+TableActivity.currentIP+":3000/api/booking");
     }
 
     public void neverMind(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(BookingActivity.this, TableActivity.class);
         startActivity(i);
     }
+
     public static String hashPassword(String password_plaintext) {
         String salt = BCrypt.gensalt(workload);
         String hashed_password = BCrypt.hashpw(password_plaintext, salt);
@@ -117,6 +130,7 @@ public class BookingActivity extends Activity{
             if(mProgressDialog != null){
                 mProgressDialog.dismiss();
             }
+            mSoundPool.play(successID,1,1,1,0,1);
             Toast.makeText(BookingActivity.this, R.string.confirm_booking, Toast.LENGTH_SHORT).show();
         }
 

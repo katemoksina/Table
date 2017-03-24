@@ -3,6 +3,8 @@ package com.example.kate.table;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +40,10 @@ public class TableActivity extends AppCompatActivity {
     Map<String, String> result;
     String[] times = new String[]{"mo1", "mo2", "mo3", "mo4", "mo5", "mo6", "mo7", "mo8", "mo9", "mo10", "tu1", "tu2", "tu3", "tu4", "tu5", "tu6", "tu7", "tu8", "tu9", "tu10", "we1", "we2", "we3", "we4", "we5", "we6", "we7", "we8", "we9", "we10", "th1", "th2", "th3", "th4", "th5", "th6", "th7", "th8", "th9", "th10", "fr1", "fr2", "fr3", "fr4", "fr5", "fr6", "fr7", "fr8", "fr9", "fr10"};
 
+
+    private SoundPool mSoundPool;
+    int clickID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +56,16 @@ public class TableActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
         setContentView(R.layout.activity_table);
 
+        mSoundPool = new SoundPool.Builder().build();
+        clickID = mSoundPool.load(this, R.raw.click,1);
+
 
         //make GET request
         new GetDataTask().execute("http://"+currentIP+":3000/api/booking");
     }
 
     public void seeDetails(View view){
-        //create DetailsActivity with onClick=seeDetails in activity_table.xml
-
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(TableActivity.this, DetailsActivity.class);
         timeSlot = view.getTag().toString();
         i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, timeSlot);
@@ -65,6 +73,7 @@ public class TableActivity extends AppCompatActivity {
     }
 
     public void makeBooking(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(TableActivity.this, BookingActivity.class);
         timeSlot = view.getTag().toString();
         i.putExtra(BookingActivity.EXTRA_TIME_SLOT, timeSlot);

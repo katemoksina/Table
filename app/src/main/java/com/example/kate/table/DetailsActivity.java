@@ -2,6 +2,7 @@ package com.example.kate.table;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -42,6 +43,8 @@ public class DetailsActivity  extends AppCompatActivity {
     public static final String EXTRA_PASS_HASH = "hashed password";
     private String mHash;
 
+    private SoundPool mSoundPool;
+    int clickID;
 
 
     @Override
@@ -58,16 +61,21 @@ public class DetailsActivity  extends AppCompatActivity {
 
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
 
+        mSoundPool = new SoundPool.Builder().build();
+        clickID = mSoundPool.load(this, R.raw.click,1);
+
         //make GET request
         new GetDataTask().execute("http://"+TableActivity.currentIP+":3000/api/booking");
     }
 
     public void gotoTable(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(DetailsActivity.this, TableActivity.class);
         startActivity(i);
     }
 
     public void cancelBooking(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(DetailsActivity.this, CancelActivity.class);
         i.putExtra(DetailsActivity.EXTRA_TIME_SLOT, mTimeSlot);
         i.putExtra(DetailsActivity.EXTRA_RECORD_ID, mID);
@@ -76,6 +84,7 @@ public class DetailsActivity  extends AppCompatActivity {
     }
 
     public void makeBooking(View view){
+        mSoundPool.play(clickID,1,1,1,0,1);
         Intent i = new Intent(DetailsActivity.this, BookingActivity.class);
         mTimeSlot = view.getTag().toString();
         i.putExtra(BookingActivity.EXTRA_TIME_SLOT, mTimeSlot);
