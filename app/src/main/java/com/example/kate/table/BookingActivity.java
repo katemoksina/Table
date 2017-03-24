@@ -35,6 +35,7 @@ import java.sql.SQLOutput;
 
 public class BookingActivity extends Activity{
 
+//    public static final String eduroam = "10.173.19.96";
     private Button mSubmit;
     private EditText mName;
     private EditText mNotes;
@@ -69,7 +70,7 @@ public class BookingActivity extends Activity{
     }
 
     public void submitRecord(View view){
-        new PostDataTask().execute("http://192.168.0.17:3000/api/booking");
+        new PostDataTask().execute("http://10.173.19.96:3000/api/booking");
     }
 
     public void neverMind(View view){
