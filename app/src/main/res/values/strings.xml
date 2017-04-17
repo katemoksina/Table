@@ -9,7 +9,7 @@
     <string name="ok">OK</string>
     <string name="book">BOOK THE ROOM</string>
     <string name="confirm_booking">Your booking is confirmed!</string>
-    <string name="enter_details">PLEASE ENTER YOUR DETAILS</string>
+    <string name="enter_details">PLEASE ENTER YOUR BOOKING CODE</string>
 
     <string name="room">Harrison 208</string>
     <string name="booking_code">Booking code</string>

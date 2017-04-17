@@ -3,16 +3,14 @@ package com.example.kate.table;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,11 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class TableActivity extends AppCompatActivity {
@@ -44,6 +38,8 @@ public class TableActivity extends AppCompatActivity {
 
     private SoundPool mSoundPool;
     int clickID;
+
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +58,16 @@ public class TableActivity extends AppCompatActivity {
 
         //make GET request
         new GetDataTask().execute("http://"+currentIP+":3000/api/booking");
+        handler.postDelayed(runnable, 60*30*1000);
     }
+
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            recreate();
+            handler.postDelayed(this, 60*30*1000);
+        }
+    };
 
     public void seeDetails(View view){
         mSoundPool.play(clickID,1,1,1,0,1);
@@ -117,7 +122,7 @@ public class TableActivity extends AppCompatActivity {
                     b.setBackgroundColor(Color.parseColor("#ff6666"));
                     String stringTime = TableActivity.this.result.get(time);
                     if (stringTime.length()>10){
-                        stringTime = stringTime.substring(0,10);
+                        stringTime = stringTime.substring(0,9)+"...";
                     }
                     b.setText(stringTime);
                 } else {
