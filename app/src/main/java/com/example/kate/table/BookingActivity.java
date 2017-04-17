@@ -144,9 +144,9 @@ public class BookingActivity extends Activity{
             //create data
                 JSONObject dataToSend = new JSONObject();
                 dataToSend.put("name", BookingActivity.this.mName.getText().toString());
-                dataToSend.put("title", BookingActivity.this.mTitle.getText().toString());
+                dataToSend.put("Act_title", BookingActivity.this.mTitle.getText().toString());
                 dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
-                dataToSend.put("notes", BookingActivity.this.mNotes.getText().toString());
+                dataToSend.put("Activity", BookingActivity.this.mNotes.getText().toString());
                 dataToSend.put("password", hashPassword(BookingActivity.this.mPassword.getText().toString()));
                 dataToSend.put("tag", BookingActivity.this.mTimeSlot);
                 System.out.println(dataToSend);

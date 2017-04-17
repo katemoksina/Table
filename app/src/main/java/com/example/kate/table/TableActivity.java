@@ -32,9 +32,10 @@ import java.util.List;
 import java.util.Map;
 
 public class TableActivity extends AppCompatActivity {
-    static String eduroamForum = "10.173.19.127";
-    static String eduroamHarrison = "10.173.19.96";
-    public static String currentIP = eduroamForum;
+    static String eduroamForum = "10.173.19.58";
+    static String eduroamHarrison = "10.173.19.71";
+    static String homeNetwork = "192.168.0.17";
+    public static String currentIP = homeNetwork;
     String timeSlot;
     JSONObject jsonline;
     Map<String, String> result;
@@ -58,7 +59,6 @@ public class TableActivity extends AppCompatActivity {
 
         mSoundPool = new SoundPool.Builder().build();
         clickID = mSoundPool.load(this, R.raw.click,1);
-
 
         //make GET request
         new GetDataTask().execute("http://"+currentIP+":3000/api/booking");
@@ -115,7 +115,11 @@ public class TableActivity extends AppCompatActivity {
                 Button b = (Button)v.findViewWithTag(time);
                 if (TableActivity.this.result.keySet().contains(time)){
                     b.setBackgroundColor(Color.parseColor("#ff6666"));
-                    b.setText(TableActivity.this.result.get(time));
+                    String stringTime = TableActivity.this.result.get(time);
+                    if (stringTime.length()>10){
+                        stringTime = stringTime.substring(0,10);
+                    }
+                    b.setText(stringTime);
                 } else {
                     b.setText("Available");
                     b.setOnClickListener(new View.OnClickListener() {
@@ -160,7 +164,7 @@ public class TableActivity extends AppCompatActivity {
 
                         for (int i=0; i < jsonline.length(); i++){
                             JSONObject jsonObject = jsonline.getJSONObject(i);
-                            result.put((String)jsonObject.get("tag"), (String)jsonObject.get("title"));
+                            result.put((String)jsonObject.get("tag"), (String)jsonObject.get("Act_title"));
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

@@ -119,14 +119,14 @@ public class DetailsActivity  extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             //set data response to textView
+            TextView booking_title = (TextView)findViewById(R.id.booking_title);
+            booking_title.setText(DetailsActivity.this.result.get("Act_title"));
+            TextView booking_notes = (TextView)findViewById(R.id.booking_notes);
+            booking_notes.setText(DetailsActivity.this.result.get("Activity"));
             TextView booking_name = (TextView)findViewById(R.id.booking_name);
             booking_name.setText(DetailsActivity.this.result.get("name"));
-            TextView booking_title = (TextView)findViewById(R.id.booking_title);
-            booking_title.setText(DetailsActivity.this.result.get("title"));
             TextView booking_email = (TextView)findViewById(R.id.booking_email);
             booking_email.setText(DetailsActivity.this.result.get("email"));
-            TextView booking_notes = (TextView)findViewById(R.id.booking_notes);
-            booking_notes.setText(DetailsActivity.this.result.get("notes"));
 
             //remove progrss dialog
             if(mProgressDialog != null){
@@ -161,10 +161,10 @@ public class DetailsActivity  extends AppCompatActivity {
                             JSONObject jsonObject = jsonline.getJSONObject(i);
                             if (((String)jsonObject.get("tag")).equals(mTimeSlot)){
                                 System.out.println(jsonObject.keys());
+                                result.put("Act_title", (String)jsonObject.get("Act_title"));
+                                result.put("Activity", (String)jsonObject.get("Activity"));
                                 result.put("name", (String)jsonObject.get("name"));
-                                result.put("title", (String)jsonObject.get("title"));
                                 result.put("email", (String)jsonObject.get("email"));
-                                result.put("notes", (String)jsonObject.get("notes"));
                                 mID = (String)jsonObject.get("_id");
                                 mHash = (String)jsonObject.get("password");
                             } else {
