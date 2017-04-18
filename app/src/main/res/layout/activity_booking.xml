@@ -83,9 +83,15 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/editTextPassword"
-        android:hint="Booking code (you will require it to cancel)"
+        android:hint="@string/booking_code"
         android:imeOptions="actionSend"
         android:gravity="top|center"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Booking code is required for cancellation. Please enter at least 4 digits."/>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
