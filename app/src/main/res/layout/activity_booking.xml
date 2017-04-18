@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:gravity="top|center"
-              android:background="#b3ccff">
+              android:background="@color/exeterSkyBlue">
 
     <RelativeLayout
         android:layout_width="0dp"
@@ -24,7 +24,7 @@
 
     <TextView
         android:text="@string/book"
-        android:textColor="#001a4d"
+        android:textColor="@color/exeterBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
@@ -53,7 +53,7 @@
         android:ems="10"
         android:id="@+id/editTextTitle"
         android:maxLength="10"
-        android:hint="@string/eventType"
+        android:hint="@string/title"
         android:imeOptions="actionSend"
         android:gravity="top|center"/>
 
@@ -83,7 +83,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/editTextPassword"
-        android:hint="@string/booking_code"
+        android:hint="Booking code (you will require it to cancel)"
         android:imeOptions="actionSend"
         android:gravity="top|center"/>
         <LinearLayout
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/book"
-        android:background="#4d88ff"
+        android:background="@color/exeterBlue"
 
         android:onClick="submitRecord"
         android:padding="12dp"
@@ -106,8 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BACK"
-                android:background="#4d88ff"
-
+                android:background="@color/exeterBlue"
                 android:onClick="neverMind"
                 android:padding="12dp"
                 android:layout_margin="20dp"/>

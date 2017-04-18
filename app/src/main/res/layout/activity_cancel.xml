@@ -3,7 +3,7 @@
               android:orientation="horizontal"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:background="#b3ccff"
+              android:background="@color/exeterSkyBlue"
     >
     <RelativeLayout
         android:layout_width="0dp"
@@ -19,35 +19,28 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|center">
+            android:gravity="center">
     <TextView
         android:text="@string/enter_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:textColor="#001a4d"
+        android:textColor="@color/exeterBlue"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:gravity="center"
         android:textStyle="normal|bold"
         android:textSize="30sp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/username"
-        android:hint="@string/username"
-        android:gravity="center"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/password"
-        android:hint="@string/booking_code"
-        android:gravity="center_vertical|center"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/password"
+                android:hint="@string/booking_code"
+                android:gravity="center_vertical|center"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="80dp"/>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -61,7 +54,7 @@
         android:onClick="cancelData"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="#4d88ff"
+        android:background="@color/exeterBlue"
         android:layout_margin="20dp"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"/>
@@ -74,7 +67,7 @@
                 android:onClick="neverMind"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:background="#4d88ff"
+                android:background="@color/exeterBlue"
                 android:layout_margin="20dp"/>
         </LinearLayout>
         </LinearLayout>

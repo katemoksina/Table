@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="exeterBlue">#00569c</color>
+    <color name="exeterSkyBlue">#5f99ca</color>
+    <color name="exeterNavyBlue">#16243d</color>
 </resources>

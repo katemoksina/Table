@@ -50,7 +50,7 @@ public class CancelActivity extends Activity {
         mTimeSlot = getIntent().getStringExtra(EXTRA_TIME_SLOT);
         mID = getIntent().getStringExtra(EXTRA_RECORD_ID);
         mHash = getIntent().getStringExtra(EXTRA_PASS_HASH);
-        mUsername = (EditText) findViewById(R.id.username);
+//        mUsername = (EditText) findViewById(R.id.username);
         mPassword   = (EditText)findViewById(R.id.password);
 
         mSoundPool = new SoundPool.Builder().build();
@@ -69,7 +69,7 @@ public class CancelActivity extends Activity {
             new DeleteDataTask().execute(s);
         } else {
             mSoundPool.play(badID,1,1,1,0,1);
-            Toast.makeText(CancelActivity.this, "Incorrect booking code", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CancelActivity.this, "Incorrect Booking Code!", Toast.LENGTH_SHORT).show();
     }
     }
 
@@ -98,7 +98,7 @@ public class CancelActivity extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
             mProgressDialog = new ProgressDialog(CancelActivity.this);
-            mProgressDialog.setMessage("Deleting data...");
+            mProgressDialog.setMessage("Cancelling the booking...");
             mProgressDialog.show();
         }
 
@@ -137,9 +137,9 @@ public class CancelActivity extends Activity {
             urlConnection.connect();
 
             if (urlConnection.getResponseCode() == 204){
-                result = "delete successful";
+                result = "Successfully cancelled!";
             } else {
-                result = "delete failed";
+                result = "Cancellation failed";
             }
 
             return result;

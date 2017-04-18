@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">iSigns</string>
     <string name="name">Name</string>
-    <string name="title">Title</string>
+    <string name="title">Event Title</string>
     <string name="email">Email</string>
     <string name="notes">Notes</string>
     <string name="seminar">Seminar</string>

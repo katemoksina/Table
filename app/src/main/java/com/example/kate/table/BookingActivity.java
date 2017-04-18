@@ -75,7 +75,12 @@ public class BookingActivity extends Activity{
 
     public void submitRecord(View view){
         mSoundPool.play(clickID,1,1,1,0,1);
-        new PostDataTask().execute("http://"+TableActivity.currentIP+":3000/api/booking");
+        if(BookingActivity.this.mName.getText().toString().matches("")||BookingActivity.this.mTitle.getText().toString().matches("")||BookingActivity.this.mPassword.getText().toString().matches("")){
+            Toast.makeText(BookingActivity.this, "Please complete Name, Event Title and Booking code", Toast.LENGTH_SHORT).show();
+
+        } else {
+            new PostDataTask().execute("http://" + TableActivity.currentIP + ":3000/api/booking");
+        }
     }
 
     public void neverMind(View view){
@@ -134,48 +139,52 @@ public class BookingActivity extends Activity{
             BufferedWriter bufferedWriter = null;
             BufferedReader bufferedReader = null;
 
-            try {
-            //create data
-                JSONObject dataToSend = new JSONObject();
-                dataToSend.put("name", BookingActivity.this.mName.getText().toString());
-                dataToSend.put("Act_title", BookingActivity.this.mTitle.getText().toString());
-                dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
-                dataToSend.put("Activity", BookingActivity.this.mNotes.getText().toString());
-                dataToSend.put("password", hashPassword(BookingActivity.this.mPassword.getText().toString()));
-                dataToSend.put("tag", BookingActivity.this.mTimeSlot);
-                System.out.println(dataToSend);
 
-                //initialise request + connect to server
-                URL url = new URL(urlPath);
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setReadTimeout(10000);
-                urlConnection.setConnectTimeout(10000);
-                urlConnection.setRequestMethod("POST");
-                urlConnection.setDoOutput(true); //enable body data
-                urlConnection.setRequestProperty("Content-Type", "application/json");
-                urlConnection.connect();
+                try {
+                    //create data
 
-                //write data into server
-                OutputStream outputStream = urlConnection.getOutputStream();
-                bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
-                bufferedWriter.write(dataToSend.toString());
-                bufferedWriter.flush();
+                    JSONObject dataToSend = new JSONObject();
+                    dataToSend.put("name", BookingActivity.this.mName.getText().toString());
+                    dataToSend.put("Act_title", BookingActivity.this.mTitle.getText().toString());
+                    dataToSend.put("email", BookingActivity.this.mEmail.getText().toString());
+                    dataToSend.put("Activity", BookingActivity.this.mNotes.getText().toString());
+                    dataToSend.put("password", hashPassword(BookingActivity.this.mPassword.getText().toString()));
+                    dataToSend.put("tag", BookingActivity.this.mTimeSlot);
+                    System.out.println(dataToSend);
 
-                //read the response from server
-                InputStream inputStream = urlConnection.getInputStream();
-                bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    result.append(line).append("\n");
+                    //initialise request + connect to server
+                    URL url = new URL(urlPath);
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    urlConnection.setReadTimeout(10000);
+                    urlConnection.setConnectTimeout(10000);
+                    urlConnection.setRequestMethod("POST");
+                    urlConnection.setDoOutput(true); //enable body data
+                    urlConnection.setRequestProperty("Content-Type", "application/json");
+                    urlConnection.connect();
+
+                    //write data into server
+                    OutputStream outputStream = urlConnection.getOutputStream();
+                    bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
+                    bufferedWriter.write(dataToSend.toString());
+                    bufferedWriter.flush();
+
+                    //read the response from server
+                    InputStream inputStream = urlConnection.getInputStream();
+                    bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                    String line;
+                    while ((line = bufferedReader.readLine()) != null) {
+                        result.append(line).append("\n");
+                    }
+
+                } finally {
+                    if (bufferedReader != null) {
+                        bufferedReader.close();
+                    }
+                    if (bufferedWriter != null) {
+                        bufferedWriter.close();
+                    }
                 }
-            } finally {
-                if (bufferedReader != null){
-                    bufferedReader.close();
-                }
-                if (bufferedWriter != null){
-                    bufferedWriter.close();
-                }
-            }
+
 
             return result.toString();
         }
