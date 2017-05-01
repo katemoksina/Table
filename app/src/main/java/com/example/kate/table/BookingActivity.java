@@ -77,8 +77,10 @@ public class BookingActivity extends Activity{
     public void submitRecord(View view){
         mSoundPool.play(clickID,1,1,1,0,1);
         if(BookingActivity.this.mName.getText().toString().matches("")||BookingActivity.this.mTitle.getText().toString().matches("")||BookingActivity.this.mPassword.getText().toString().matches("")) {
+            mSoundPool.play(badID,1,1,1,0,1);
             Toast.makeText(BookingActivity.this, "Please complete Name, Event Title and Booking code", Toast.LENGTH_SHORT).show();
         }else if(BookingActivity.this.mPassword.getText().toString().length()<4||!BookingActivity.this.mPassword.getText().toString().matches("\\d+?")){
+            mSoundPool.play(badID,1,1,1,0,1);
             Toast.makeText(BookingActivity.this, "Booking code must have at least 4 digits", Toast.LENGTH_SHORT).show();
         } else {
             new PostDataTask().execute("http://" + TableActivity.currentIP + ":3000/api/booking");
