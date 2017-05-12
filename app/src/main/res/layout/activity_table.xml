@@ -13,599 +13,602 @@
     >
     <TableRow android:gravity="center"
         android:layout_weight="1">
-        <TextView
+        <TextClock
+            android:id="@+id/textClock"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/exeterBlue"
+            android:gravity="center_horizontal"
             android:layout_margin="1dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Monday"
-            android:background="@color/exeterBlue"
-            android:layout_margin="1dp"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Tuesday"
-            android:background="@color/exeterBlue"
-            android:layout_margin="1dp"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Wednesday"
-            android:background="@color/exeterBlue"
-            android:layout_margin="1dp"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Thursday"
-            android:background="@color/exeterBlue"
-            android:layout_margin="1dp"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Friday"
-            android:background="@color/exeterBlue"
-            android:layout_margin="1dp"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
-    </TableRow>
-    <TableRow android:gravity="center"
-              android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:text="8:30-9:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:textStyle="normal|bold"
-            android:gravity="center"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_height="fill_parent"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:background="@color/exeterBlue"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:background="@color/exeterBlue"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:background="@color/exeterBlue"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:background="@color/exeterBlue"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:background="@color/exeterBlue"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
+</TableRow>
+<TableRow android:gravity="center"
+          android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:text="8:30-9:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:textStyle="normal|bold"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_height="fill_parent"
 
-            android:tag="mo1"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"
-            />
-        <Button
-            android:layout_height="fill_parent"
+        android:tag="mo1"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"
+        />
+    <Button
+        android:layout_height="fill_parent"
 
-            android:tag="tu1"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"
-            />
-        <Button
-            android:layout_height="fill_parent"
+        android:tag="tu1"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"
+        />
+    <Button
+        android:layout_height="fill_parent"
 
-            android:tag="we1"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"
-            />
-        <Button
-            android:layout_height="fill_parent"
+        android:tag="we1"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"
+        />
+    <Button
+        android:layout_height="fill_parent"
 
-            android:tag="th1"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"
-            />
-        <Button
-            android:layout_height="fill_parent"
+        android:tag="th1"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"
+        />
+    <Button
+        android:layout_height="fill_parent"
 
-            android:tag="fr1"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"
-            />
-    </TableRow>
-    <TableRow android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
+        android:tag="fr1"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"
+        />
+</TableRow>
+<TableRow android:gravity="center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
 
-            android:text="9:30-10:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo2"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu2"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we2"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th2"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr2"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="10:30-11:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo3"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu3"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we3"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th3"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr3"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="11:30-12:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo4"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu4"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we4"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th4"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr4"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="12:30-13:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo5"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu5"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:tag="we5"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th5"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr5"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow  android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="13:30-14:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo6"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu6"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we6"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th6"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr6"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow  android:gravity="center"
-               android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="14:30-15:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo7"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu7"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we7"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th7"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr7"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow  android:gravity="center"
-               android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="15:30-16:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo8"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu8"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we8"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th8"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr8"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow  android:gravity="center"
-               android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="16:30-17:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo9"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu9"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we9"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th9"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr9"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
-    <TableRow  android:gravity="center"
-               android:layout_weight="1">
-        <TextView
-            android:layout_height="match_parent"
-            android:text="17:30-18:30"
-            android:layout_margin="1dp"
-            android:background="@color/exeterBlue"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:layout_width="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="mo10"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="tu10"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="we10"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="th10"
-            android:layout_margin="1dp"
-            android:background="@color/exeterSkyBlue"
-            android:onClick="seeDetails"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            
-            android:tag="fr10"
-            android:background="@color/exeterSkyBlue"
-            android:layout_margin="1dp"
-            android:onClick="seeDetails"/>
-    </TableRow>
+        android:text="9:30-10:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo2"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu2"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we2"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th2"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr2"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow android:gravity="center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="10:30-11:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo3"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu3"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we3"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th3"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr3"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow android:gravity="center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="11:30-12:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo4"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu4"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we4"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th4"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr4"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow android:gravity="center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="12:30-13:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo5"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu5"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="we5"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th5"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr5"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow  android:gravity="center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="13:30-14:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo6"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu6"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we6"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th6"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr6"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow  android:gravity="center"
+           android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="14:30-15:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo7"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu7"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we7"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th7"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr7"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow  android:gravity="center"
+           android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="15:30-16:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo8"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu8"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we8"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th8"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr8"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow  android:gravity="center"
+           android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="16:30-17:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo9"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu9"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we9"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th9"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr9"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
+<TableRow  android:gravity="center"
+           android:layout_weight="1">
+    <TextView
+        android:layout_height="match_parent"
+        android:text="17:30-18:30"
+        android:layout_margin="1dp"
+        android:background="@color/exeterBlue"
+        android:gravity="center"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="mo10"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="tu10"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="we10"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="th10"
+        android:layout_margin="1dp"
+        android:background="@color/exeterSkyBlue"
+        android:onClick="seeDetails"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:tag="fr10"
+        android:background="@color/exeterSkyBlue"
+        android:layout_margin="1dp"
+        android:onClick="seeDetails"/>
+</TableRow>
 </TableLayout>
 </LinearLayout>
